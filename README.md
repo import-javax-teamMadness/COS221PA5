@@ -10,4 +10,4 @@ u20466570 - Michael Geere
 u20531550 - Vincent Mostert
 
 Contributions:
-Robert Officer: DB creation
+</br>Robert Officer: DB creation
