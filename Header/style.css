@@ -1,0 +1,39 @@
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+.nav_links {
+background-color: black;
+overflow: hidden;
+}
+
+.nav_links a{
+float: left;   
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.nav_links a:hover {
+background-color: grey;
+color: black;
+
+}
+
+.nav_links a.active {
+ background-color: black;
+ color: white;
+
+}
+body{
+color: white;
+background-color: white;
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+font-size: 17px;
+line-height: 1.6;
+}
