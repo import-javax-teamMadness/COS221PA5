@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 }
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
-    $query = "SELECT email, password FROM ijtm_USERS WHERE email='" . $_POST['username'] . "' AND password='" . $_POST['password'] . "'";
+    $query = "SELECT username, password FROM ijtm_USERS WHERE username='" . $_POST['username'] . "' AND password='" . $_POST['password'] . "'";
     $result = mysqli_query($conn, $query);
     if (mysqli_num_rows($result) > 0) {
         session_start();
