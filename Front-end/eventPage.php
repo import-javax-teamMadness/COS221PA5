@@ -10,38 +10,115 @@
 
 <body>
     <main>
-        <div class="login-page-flex-container">
-            <div class="box" id="headings">
-                <h1>
-                    Golf Galore
-                    <p id=subheading>
-                        Create User
-                    </p>
-                </h1>
-            </div>
-            <div class="box3" id="loginForm">
-                <p id=intro>
-                    On this page you may create a user who will use the Golf Galore web application.
-                <p>
+        <div class="eventpage-flex-container">
 
-                <p id="createUserForm">
-                <form action="createUser-validation.php" method="POST">
-                    <label for="user">Email:</label>
-                    <input type="text" id="user" name="email">
-                    <label for="pass">Password:</label>
-                    <input type="text" id="pass" name="pass"><br><br>
-                    <label for="user">First Name:</label>
-                    <input type="text" id="user" name="fname">
-                    <label for="pass">Surame:</label>
-                    <input type="text" id="pass" name="sname"><br><br>
-                    <label for="user">Age:</label>
-                    <input type="text" id="user" name="age">
-                    <label for="admin">Admin privilages?</label>
-                    <input type="checkbox" name="admin_priv" id="admin"><br><br>
-                    <input type="submit" value="Submit">
-                </form>
-                </p>
+            <div class="eventpage-flex-container-ongoingEvents">
+                <div class="box9" id="ongoingEvents">
+                    <h2>
+                        Ongoing events:
+                    </h2>
+                    <?php
+                    $servername = 'wheatley.cs.up.ac.za';
+                    $username = 'u20431122';
+                    $password = 'E37VCXZWH5LZ3W6RCTHKYKJWSEDIT7DR';
+                    $conn = new mysqli($servername, $username, $password);
+
+                    if ($conn->connect_error) {
+                        die('Connection failed: ' . $conn->connect_error);
+                    } else {
+                        $conn->select_db("u20431122_");
+                        echo "<script>console.log('Database connected Successfully')</script>";
+                    }
+
+                    if (!isset($_POST['data'])) {
+                        $query = "Select * from events";
+                        $result = mysqli_query($conn, $query);
+                        $list = array();
+
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<script>var table = document.getElementById('events');
+                        var row = table.insertRow();
+                
+                        var cell1 = row.insertCell(0);
+                        var cell2 = row.insertCell(1);
+                
+                        cell1.innerHTML = " . $row['id'] . ";
+                        cell2.innerHTML = '" . $row['start_date_time'] . ";
+                        </script>";
+                            }
+                        } else {
+                            echo "No data available";
+                        }
+                        unset($_POST['data']);
+                    } else {
+                        echo "No data available";
+                    }
+                    $conn->close();
+                    ?>
+                </div>
             </div>
+
+            <div class="eventpage-flex-container-eventStats">
+                <div class="box10" id="eventStats">
+                    <h2>
+                        Event Statistics:
+                    </h2>
+                    <?php
+                    $servername = 'wheatley.cs.up.ac.za';
+                    $username = 'u20431122';
+                    $password = 'E37VCXZWH5LZ3W6RCTHKYKJWSEDIT7DR';
+                    $conn = new mysqli($servername, $username, $password);
+
+                    if ($conn->connect_error) {
+                        die('Connection failed: ' . $conn->connect_error);
+                    } else {
+                        $conn->select_db("u20431122_");
+                        echo "<script>console.log('Database connected Successfully')</script>";
+                    }
+
+                    if (!isset($_POST['data'])) {
+                        $query = "Select * from  event_stats";
+                        $result = mysqli_query($conn, $query);
+                        $list = array();
+
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<script>var table = document.getElementById('golf_event_stats');
+                        var row = table.insertRow();
+                
+                        var cell1 = row.insertCell(0);
+                        var cell2 = row.insertCell(1);
+                        var cell3 = row.insertCell(2);
+                        var cell4 = row.insertCell(3);
+                
+                        cell1.innerHTML = " . $row['event_id'] . ";
+                        cell2.innerHTML = '" . $row['best_stroke'] . ";
+                        cell3.innerHTML = '" . $row['Money_won'] . ";
+                        cell4.innerHTML = '" . $row['event_winner_id'] . ";
+                        </script>";
+                            }
+                        } else {
+                            echo "No data available";
+                        }
+                        unset($_POST['data']);
+                    } else {
+                        echo "No data available";
+                    }
+                    ?>
+                </div>
+            </div>
+            <p>
+            <form action="addEvent.php" method="POST">
+                <input type="submit" value="Add Event">
+            </form>
+            </p>
+            <p>
+            <form action="editEvent.php" method="POST">
+                <input type="submit" value="Edit Event">
+            </form>
+            </p>
+        </div>
     </main>
 
     <body>
