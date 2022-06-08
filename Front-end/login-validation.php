@@ -23,4 +23,3 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         echo '<span class="error-span" id="pass-error">Invalid username or password</span>';
     }
 }
-?>

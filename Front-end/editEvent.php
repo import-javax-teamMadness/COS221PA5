@@ -21,22 +21,22 @@
             </div>
             <div class="box3" id="loginForm">
                 <p id=intro>
-                    On this page you may create an event in which golf players will participate in.
+                    On this page you may edit the start date, golf course ID and attendance of an event ID of your choice.
                 <p>
 
                 <p id="addEventForm">
 
-                <form method="POST" action="eventPage.php">
+                <form method="POST" action="editEvent.php">
                     <label for="id">ID of event to edit:</label>
-                    <input type="text" id="eId" name="eventId">
+                    <input type="text" id="eId" name="eventId"><br><br>
                     <label for="id">Attribute to edit:</label>
-                    <select class="edit" name="editEvent" id="editEvent_dropdown">
-                        <option value="0">Start Date</option>
-                        <option value="1">Golf Course ID</option>
-                        <option value="2">Attendance</option>
-                    </select>
+                    <select class="edit" id="editEvent_dropdown" name="editEvent_dropdown">
+                        <option value="start_date_time">Start Date</option>
+                        <option value="attendance">Attendance</option>
+                    </select><br><br>
                     <label for="sdate">New attribte value:</label>
-                    <input type="text" id="newVal" name="editedValue"><br><br>
+                    <input type="text" id="newVal" name="editedValue">
+                    <input type="submit" value="Submit">
                 </form>
                 <?php
                 $servername = 'wheatley.cs.up.ac.za';
@@ -50,9 +50,11 @@
                     $conn->select_db("u20431122_");
                 }
 
-                if (isset($_POST['eventId']) && isset($_POST['startDate']) && isset($_POST['golfCourseId']) && isset($_POST['attendance'])) {
-                    $query = "UPDATE events (id, start_date_time, site_id, event_status, attendance)
-                VALUES ('" . $_POST['eventId'] . "', '" . $_POST['startDate'] . "', '" . $_POST['golfCourseId'] . "', incomplete, '" . $_POST['attendance'] . "')";
+                if (isset($_POST['eventId']) && isset($_POST['editEvent_dropdown']) && isset($_POST['editedValue'])) {
+                    echo $_POST['editEvent_dropdown'];
+                    $query = "UPDATE events
+                              SET '" . $_POST['editEvent_dropdown'] . "' = '" . $_POST['editedValue'] . "'
+                              WHERE id = '" . $_POST['eventId'];
                     mysqli_query($conn, $query);
                     session_start();
                     $conn->close();

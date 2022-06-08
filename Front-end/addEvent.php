@@ -15,17 +15,18 @@
                 <h1>
                     Golf Galore
                     <p id=subheading>
-                        Add Event
+                        Edit Event
                     </p>
                 </h1>
             </div>
             <div class="box3" id="loginForm">
                 <p id=intro>
+
                     On this page you may create an event in which golf players will participate in.
-                <p>
+                </p>
 
                 <p id="addEventForm">
-                <form method="POST" action="eventPage.php">
+                <form method="POST" action="addEvent.php">
                     <label for="id">id:</label>
                     <input type="text" id="eId" name="eventId" readonly="readonly">
                     <label for="sdate">Start date:</label>
