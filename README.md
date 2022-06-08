@@ -12,3 +12,4 @@ Members:
 Contributions:
 </br>Robert Officer - DB creation
 </br>Vincent Mostert - Mock Data collection, Database insert
+</br>Michael Geere - Implementation of front- and back-end web application.
