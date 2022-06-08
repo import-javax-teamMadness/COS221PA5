@@ -1,0 +1,331 @@
+* {}
+
+@font-face {
+    font-family: fontA;
+    src: url(../fonts/CoventryGardenNF.ttf);
+}
+
+@font-face {
+    font-family: fontB;
+    src: url(../fonts/libel-suit-rg.otf);
+}
+
+@font-face {
+    font-family: fontC;
+    src: url(../fonts/LibreBaskerville-Regular.ttf);
+}
+
+body {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+
+
+.login-page-flex-container {
+    display: flex;
+    justify-content: flex-start;
+    height: 95vh;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.login-page-flex-container>div {
+    color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.box {
+    width: 800px;
+    height: 300px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.box2 {
+    width: 800px;
+    height: 300px;
+    margin: 0px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.82);
+}
+
+.box3 {
+    width: 800px;
+    height: 400px;
+    margin: 0px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.82);
+}
+
+h1 {
+    line-height: 65px;
+    font-size: 120px;
+    font-family: fontA;
+}
+
+h2 {
+    line-height: 20px;
+    font-size: 23px;
+    font-family: fontC;
+}
+
+h3 {
+    line-height: 20px;
+    font-size: 23px;
+    font-family: fontC;
+}
+
+p {}
+
+#subheading {
+    font-size: 50px;
+    font-family: fontB;
+}
+
+#intro {
+    font-size: 20px;
+    font-family: fontC;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#loginForm {
+    font-size: 30px;
+    font-family: fontC;
+}
+
+#createUserForm {
+    font-size: 30px;
+    line-height: 80px;
+    font-family: fontC;
+}
+
+input[type=submit] {
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid #000000;
+}
+
+input[type=submit]:hover {
+    background-color: #4CAF50;
+    border: 2px solid #4CAF50;
+    color: white;
+}
+
+.homepage-flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 98vh;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.homepage-flex-container-tournamentInfo {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.homepage-flex-container-tournamentInfo>div {
+    border-radius: 20px;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.homepage-flex-container-tournamentScoreboard {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.homepage-flex-container-tournamentScoreboard>div {
+    border-radius: 20px;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.homepage-flex-container-image-description {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.homepage-flex-container-image-description>div {
+    border-radius: 20px;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.box4 {
+    width: 450px;
+    height: 600px;
+    margin-right: 30px;
+    background-color: rgba(0, 0, 0, 0.82);
+}
+
+.box5 {
+    width: 1310px;
+    height: 600px;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.82);
+}
+
+.box6 {
+    width: 1800px;
+    height: 300px;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.82);
+}
+
+.box7 {
+    width: 800px;
+    height: 530px;
+    margin-right: 20px;
+    background-image: url(../images/pebble-beach.jpg);
+}
+
+.box8 {
+    width: 460px;
+    height: 530px;
+    background-color: rgba(0, 0, 0, 0.82);
+}
+
+#tournaments {
+    font-size: 10px;
+    font-family: fontC;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+#tournamentInfo {
+    font-size: 15px;
+    font-family: fontC;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+#scoreboard {
+    font-size: 15px;
+    line-height: 80px;
+    font-family: fontC;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+#tournamentList {
+    font-size: 25px;
+    font-family: fontC;
+}
+
+#tournamentList:hover {
+    text-decoration: underline;
+}
+
+#courseDesc {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 12px;
+    font-size: 20px;
+    font-family: fontC;
+}
+
+.eventpage-flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 98vh;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.eventpage-flex-container-ongoingEvents {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: row;
+}
+
+.eventpage-flex-container-ongoingEvents>div {
+    border-radius: 20px;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.eventpage-flex-container-eventStats {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.eventpage-flex-container-eventStats>div {
+    border-radius: 20px;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.box9 {
+    width: 40%;
+    height: 64vh;
+    background-color: rgba(0, 0, 0, 0.82);
+    color: black;
+    margin-top: 10px;
+}
+
+.box10 {
+    width: 1700px;
+    height: 250px;
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, 0.82);
+}
+
+.eventpage-button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#addEventForm {
+    font-size: 30px;
+    line-height: 80px;
+    font-family: fontC;
+}
+
+.editEvent_dropdown option {
+    font-size: 60px;
+    width: 150px;
+    line-height: 80px;
+    font-family: fontC;
+}
+
+.ongoingEvents {
+    color: #ffffff;
+    margin-top: 15px;
+}
