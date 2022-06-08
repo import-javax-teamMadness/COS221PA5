@@ -1,0 +1,41 @@
+//     var display ="";
+            //     for(var k=0; k< players.length; k++)
+            //     {
+            //         display += `<form id="formA">
+            //         <div class="row">
+            //         <h4>Capturing Scores</h4>
+            //         <div class="input-group ">
+            //             <h4>${players[k].player_fname}</h4>
+            //             <input name="hole1" id="hole1" type="text" placeholder="Hole 1"/>
+            //             <input name="hole2" id="hole2" type="text" placeholder="Hole 2"/>
+            //             <input name="hole3" id="hole3" type="text" placeholder="Hole 3"/>
+            //             <input name="hole4" id="hole4" type="text" placeholder="Hole 4"/>
+            //             <input name="hole5" id="hole5" type="text" placeholder="Hole 5"/>
+            //             <input name="hole6" id="hole6" type="text" placeholder="Hole 6"/>
+            //             <input name="hole7" id="hole7" type="text" placeholder="Hole 7"/>
+            //             <input name="hole8" id="hole8" type="text" placeholder="Hole 8"/>
+            //             <input name="hole9" id="hole9" type="text" placeholder="Hole 9"/>
+            //             <input name="hole10" id="hole10" type="text" placeholder="Hole 10"/>
+            //             <input name="hole11" id="hole11" type="text" placeholder="Hole 11"/>
+            //             <input name="hole12" id="hole12" type="text" placeholder="Hole 12"/>
+            //             <input name="hole13" id="hole13" type="text" placeholder="Hole 13"/>
+            //             <input name="hole14" id="hole14" type="text" placeholder="Hole 14"/>
+            //             <input name="hole15" id="hole15" type="text" placeholder="Hole 15"/>
+            //             <input name="hole16" id="hole16" type="text" placeholder="Hole 16"/>
+            //             <input name="hole17" id="hole17" type="text" placeholder="Hole 17"/>
+            //             <input name="hole18" id="hole18" type="text" placeholder="Hole 18"/>
+            //         </div></div>
+            //     <div class="action">
+            //         <button id="captureScore" class="action-button">Capture</button>
+            //     </div><br>
+            //     </form>
+            //         `;
+            //     }
+
+                    
+            //     document.getElementById("getevent").style.display = "none";
+            //     document.getElementById("capture_Score").innerHTML = display;
+            //     document.getElementById("capture_Score").style.display = 'block';
+                
+
+            // }
